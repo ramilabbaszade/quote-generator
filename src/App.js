@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [quotes, setQuotes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     getQuote();
@@ -21,14 +22,19 @@ function App() {
 
   return (
     <div className="App">
-      <div className="restart_btn" onClick={getQuote}>
-        Restart
+      <div className={`header ${isDark && "dark"}`}>
+        <div className="restart_btn" onClick={getQuote}>
+          Restart
+        </div>
+        <div className="restart_btn" onClick={() => setIsDark(!isDark)}>
+          Dark mode
+        </div>
       </div>
-      <div className="App_container">
+      <div className={`App_container ${isDark && "dark"}`}>
         {quotes.map((quotes) => {
           return (
             <main key={quotes._id}>
-              <div className="quote">
+              <div className={`quote ${isDark && "dark"}`}>
                 <p>{isLoading ? "Loading..." : quotes.quoteText}</p>
               </div>
               <div className="author">

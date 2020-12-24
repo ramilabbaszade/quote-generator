@@ -11,9 +11,7 @@
   padding: 1rem;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 1rem auto;
   cursor: pointer;
-  width: 60px;
 }
 
 main{
@@ -29,4 +27,15 @@ main{
   border-left: 2px solid chocolate;
   min-width: 50rem;
   background: #eeeeee;
+}
+
+.dark{
+  background: black;
+  color: white;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
 }
