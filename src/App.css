@@ -21,11 +21,12 @@ main{
 }
 .author{
   margin-top: 1rem;
+  font-weight: bold;
 }
 .quote{
   padding: 1rem;
   border-left: 2px solid chocolate;
-  min-width: 50rem;
+  width: 50rem;
   background: #eeeeee;
 }
 
